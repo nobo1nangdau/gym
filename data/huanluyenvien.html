@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Huấn luyện viên | Gym Management</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+    }
+  </style>
+</head>
+
+<body class="flex min-h-screen">
+  
+  <!-- Sidebar (Thanh điều hướng bên trái) -->
+  <aside class="w-64 bg-gray-800 text-white p-6 shadow-xl">
+    <div class="text-2xl font-bold mb-8 text-white">Gym Management</div>
+    <nav>
+      <ul>
+        <li class="mb-4">
+          <a href="../index.html" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+            Trang chủ
+          </a>
+        </li>
+        <li class="./hoivien.html">
+          <a href="#members" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.993 3.993 0 0015 12H9a3.993 3.993 0 00-.25.094A5.972 5.972 0 003 15v3h13z" />
+            </svg>
+            Hội viên
+          </a>
+        </li>
+        <li class="./huanluyenvien.html">
+          <a href="#trainers" class="flex items-center p-3 rounded-lg bg-gray-700 text-indigo-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+            </svg>
+            Huấn luyện viên
+          </a>
+        </li>
+        <li class="mb-4">
+          <a href="./goitap.html" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M11 3a1 1 0 100 2h2a1 1 0 100-2h-2z" />
+              <path d="M11 4a1 1 0 100 2h2a1 1 0 100-2h-2z" />
+              <path fill-rule="evenodd"
+                d="M10 1a1 1 0 011 1v2a1 1 0 11-2 0V2a1 1 0 011-1zM5 4a1 1 0 10-2 0v2a1 1 0 102 0V4zM4 9a1 1 0 011-1h10a1 1 0 011 1v1h-1v-1H5v1H4v-1z"
+                clip-rule="evenodd" />
+              <path d="M15 12h-1a1 1 0 01-1-1v-2a1 1 0 112 0v2a1 1 0 01-1 1z" />
+              <path fill-rule="evenodd"
+                d="M15 9h1a1 1 0 011 1v4a1 1 0 01-1 1h-1a1 1 0 01-1-1v-4a1 1 0 011-1zM5 9h1a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4a1 1 0 011-1z"
+                clip-rule="evenodd" />
+            </svg>
+            Gói tập
+          </a>
+        </li>
+        <li class="mb-4">
+          <a href="./thanhtoan.html" class="flex items-center p-3 rounded-lg hover:bg-gray-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M4 4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm12 8a2 2 0 100-4 2 2 0 000 4z" />
+            </svg>
+            Thanh toán
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 p-8 overflow-y-auto">
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900">Quản lý Huấn luyện viên</h1>
+      <p class="mt-2 text-gray-600">Thêm, chỉnh sửa và quản lý thông tin của các huấn luyện viên.</p>
+    </header>
+
+    <!-- Nút Thêm mới -->
+    <div class="flex justify-end mb-6">
+      <button
+        class="bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+            clip-rule="evenodd" />
+        </svg>
+        Thêm Huấn luyện viên
+      </button>
+    </div>
+
+    <!-- Bảng danh sách Huấn luyện viên -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              ID
+            </th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Ảnh
+            </th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Tên
+            </th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Số điện thoại
+            </th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Email
+            </th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Hành động
+            </th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <!-- Hàng dữ liệu mẫu -->
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-900">#001</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <img class="h-10 w-10 rounded-full" src="https://placehold.co/40x40/94A3B8/ffffff?text=PT1"
+                alt="Ảnh huấn luyện viên">
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm font-medium text-gray-900">Nguyễn Văn A</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-900">0912-345-678</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-900">nguyenvana@email.com</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <a href="#" class="text-indigo-600 hover:text-indigo-900 transition-colors mr-4">Chỉnh sửa</a>
+              <a href="#" class="text-red-600 hover:text-red-900 transition-colors">Xóa</a>
+            </td>
+          </tr>
+          <!-- Hàng dữ liệu mẫu -->
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-900">#002</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <img class="h-10 w-10 rounded-full" src="https://placehold.co/40x40/94A3B8/ffffff?text=PT2"
+                alt="Ảnh huấn luyện viên">
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm font-medium text-gray-900">Trần Thị B</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-900">0987-654-321</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <div class="text-sm text-gray-900">tranthib@email.com</div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <a href="#" class="text-indigo-600 hover:text-indigo-900 transition-colors mr-4">Chỉnh sửa</a>
+              <a href="#" class="text-red-600 hover:text-red-900 transition-colors">Xóa</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+
+</html>

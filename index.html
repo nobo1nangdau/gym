@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ | Gym Management</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tùy chỉnh font chữ cho toàn bộ trang web */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Hiệu ứng gradient cho phần Hero Section */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1920x1080/0F172A/ffffff?text=Gym+Background');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Thanh điều hướng (Navbar) -->
+    <nav class="fixed w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition-colors">GYM</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Trang chủ</a>
+                <a href="./data/hoivien.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Hội viên</a>
+                <a href="./data/huanluyenvien.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Huấn luyện viên</a>
+                <a href="./data/goitap.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Gói tập</a>
+                <a href="./data/thanhtoan.html" class="text-gray-600 hover:text-indigo-600 transition-colors">Thanh toán</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="data/dangnhap.html" class="flex items-center bg-white text-indigo-600 border border-indigo-600 font-semibold py-2 px-5 rounded-full hover:bg-indigo-50 transition-transform transform hover:scale-105 duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    Đăng nhập
+                </a>
+                <a href="data/dangki.html" class="flex items-center bg-indigo-600 text-white font-semibold py-2 px-5 rounded-full hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    Đăng kí
+                </a>
+            </div>
+            <!-- Nút menu cho thiết bị di động -->
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Phần chính (Hero Section) -->
+    <header class="hero-bg text-white py-40 px-4 md:py-64 flex items-center justify-center">
+        <div class="text-center max-w-4xl mx-auto animate-fadeInUp">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+                Khởi đầu hành trình khoẻ mạnh của bạn ngay hôm nay!
+            </h1>
+            <p class="mt-4 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                Chúng tôi cung cấp các chương trình tập luyện chuyên nghiệp, trang thiết bị hiện đại và huấn luyện viên tận tâm.
+            </p>
+            <div class="mt-8">
+                <a href="#services" class="inline-block bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 duration-300 mr-4">
+                    Khám phá ngay
+                </a>
+                <a href="#contact" class="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105 duration-300">
+                    Liên hệ tư vấn
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Phần Giới thiệu/Tính năng -->
+    <section id="about" class="container mx-auto py-20 px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Tại sao nên chọn chúng tôi?</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Chúng tôi cam kết mang đến trải nghiệm tập luyện tốt nhất với những giá trị vượt trội.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Thẻ tính năng 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300">
+                <div class="flex justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-5a2 2 0 00-2-2h-3v5zM5 20h5v-5a2 2 0 01-2-2H3v5zM5 8v-3h3a2 2 0 012-2h5a2 2 0 012 2v3h3a2 2 0 012 2v5h-5v-5a2 2 0 00-2-2h-3a2 2 0 00-2 2v5H5v-5a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Huấn luyện viên chuyên nghiệp</h3>
+                <p class="text-gray-600">Đội ngũ huấn luyện viên giàu kinh nghiệm, tận tâm, giúp bạn đạt được mục tiêu nhanh chóng và an toàn.</p>
+            </div>
+            <!-- Thẻ tính năng 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300">
+                <div class="flex justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.791A9 9 0 1112.201 3.209a9 9 0 008.79 9.582z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Thiết bị hiện đại</h3>
+                <p class="text-gray-600">Phòng gym được trang bị máy móc tiên tiến, đạt chuẩn quốc tế, mang lại hiệu quả tập luyện tối đa.</p>
+            </div>
+            <!-- Thẻ tính năng 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 duration-300">
+                <div class="flex justify-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Cộng đồng thân thiện</h3>
+                <p class="text-gray-600">Tham gia vào một môi trường tích cực, tràn đầy năng lượng và cùng nhau phát triển bản thân.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần CTA (Call to Action) -->
+    <section class="bg-indigo-600 text-white py-20 px-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Sẵn sàng để bắt đầu chưa?</h2>
+            <p class="text-lg mb-8">
+                Đăng ký ngay hôm nay để nhận ưu đãi đặc biệt và bắt đầu hành trình của bạn.
+            </p>
+            <a href="#" class="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105 duration-300">
+                Đăng ký ngay
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-10 px-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Gym Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
