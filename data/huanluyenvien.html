@@ -16,7 +16,34 @@
 </head>
 
 <body class="flex min-h-screen">
-  
+  <div id="addForm" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+      <h2 class="text-xl font-bold mb-4">Thêm Huấn luyện viên</h2>
+      <form id="trainerForm">
+        <div class="mb-3">
+          <label class="block text-sm font-medium text-gray-700">Tên</label>
+          <input id="name" type="text" required class="mt-1 w-full border rounded-md p-2">
+        </div>
+        <div class="mb-3">
+          <label class="block text-sm font-medium text-gray-700">Số điện thoại</label>
+          <input id="phone" type="text" required class="mt-1 w-full border rounded-md p-2">
+        </div>
+        <div class="mb-3">
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input id="email" type="email" required class="mt-1 w-full border rounded-md p-2">
+        </div>
+        <div class="mb-3">
+          <label class="block text-sm font-medium text-gray-700">Mã ảnh đại diện (VD: PT3)</label>
+          <input id="avatar" type="text" required class="mt-1 w-full border rounded-md p-2">
+        </div>
+        <div class="flex justify-end mt-4">
+          <button type="button" id="cancelBtn" class="mr-2 bg-gray-300 px-4 py-2 rounded">Hủy</button>
+          <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Lưu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Sidebar (Thanh điều hướng bên trái) -->
   <aside class="w-64 bg-gray-800 text-white p-6 shadow-xl">
     <div class="text-2xl font-bold mb-8 text-white">Gym Management</div>
@@ -86,7 +113,7 @@
 
     <!-- Nút Thêm mới -->
     <div class="flex justify-end mb-6">
-      <button
+      <button id="showFormBtn"
         class="bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transition-colors flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd"
@@ -173,7 +200,7 @@
       </table>
     </div>
   </main>
-
+<script src="../assets/script/core/themhlv.js"></script>
 </body>
 
 </html>
